@@ -1,0 +1,31 @@
+
+		if (day.registers.length === 0) {
+			return false
+		}
+
+		// Verificar: Se 'atividade' ja tem uma Data de Finalizacao 
+		if (day.registers.every(d => d.moment_endDate.isValid())) {
+			// Atividade Nao esta Atrasada
+			return false
+		}
+
+		// Definir(dataInicioDaAtividade): Data de Inicio da atividade
+		const inicioAtividade = day.registers.find(d => !d.moment_endDate.isValid()).moment_startDate
+		// Definir(limiteInicialDaAtividade): inicio 00:00 da 'dataInicioDaAtividade'
+		const limiteInicialDaAtividade = new Date(inicioAtividade.toDate()).setHours(0, 0, 0, 0);
+		// Definir(limiteFinalDaAtividade): final 23:59 da 'dataInicioDaAtividade'
+		const limiteFinalDaAtividade = new Date(inicioAtividade.toDate()).setHours(23, 59, 59, 999);
+
+		// Definir(agora): A data de Agora
+		const agora =  moment.utc();
+	
+		// Comparar: Se 'agora' esta entre 'limiteInicialDaAtividade' e 'limiteFinalDaAtividade'
+		console.table({agora: agora.toString(), limiteInicialDaAtividade: limiteInicialDaAtividade.toString(), limiteFinalDaAtividade: limiteFinalDaAtividade.toString()})
+		if (agora.isBetween(limiteInicialDaAtividade,limiteFinalDaAtividade)) {
+			// Nao esta atrasada
+			return false
+		// Se Nao
+		} else {
+			// Vai estar Atrasada
+			return true
+		}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      .el--1 {
+        background-color: blueviolet;
+      }
+      .el--2 {
+        background-color: orangered;
+      }
+      .el--3 {
+        background-color: green;
+        height: 150px;
+      }
+      .el--4 {
+        background-color: goldenrod;
+      }
+      .el--5 {
+        background-color: palevioletred;
+      }
+      .el--6 {
+        background-color: steelblue;
+      }
+      .el--7 {
+        background-color: yellow;
+      }
+      .el--8 {
+        background-color: crimson;
+      }
+
+      .container {
+        /* STARTER */
+        font-family: sans-serif;
+        background-color: #ddd;
+        font-size: 40px;
+        margin: 40px;
+
+        /* FLEXBOX */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        /* GAP adiciona margin entre os elementos */
+        gap: 30px;
+      }
+
+      .el {
+        /* 
+        DEFAULTS (valores definidos por padrão)
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto; */
+
+        /* para dar largura ao elemento se utiliza o flex-basis e não width, 
+          desta forma os elementos se ajustarão ao tamanho do container 
+        */
+        /* flex-basis: 200px; */
+        /* flex-shrink determina se o flex-box tem permissão para encolher o elemento se necessário ou não */
+        /* flex-shrink: 0; */
+        /* flex-grow determina se o elemento pode crescer o máximo que podem ou não */
+        /* flex-grow: 1; */
+        /* para defirnir flex-grow + flex-shrink + flex-basis de forma compacta */
+        /* flex: 0 0 200px; */
+
+        flex: 1;
+      }
+
+
+      /* ALINHANDO UM ÚNICO ELEMENTO COM ALIGN-SELF */
+
+      .el--1 {
+        align-self: flex-start;
+        /* o valor que recebe será a quantidade de valores que tem disponivel que irá receber
+          se for definido 2 este elemento receberá 2x o tamanho disponível, 
+          se 3 ele receberá 3x o tamanho disponível
+        */
+        /* flex-grow: 2; */
+      }
+
+      .el--6 {
+        align-self: stretch;
+      }
+
+      /* MOVENDO A ORDEM DOS ELEMENTOS SEM ALTERAR O HTML UTILIZANDO ORDER 
+        (TODOS OS ELEMENTOS ESTÃO EM ORDEM 0, QUER DIZER A ORDEM DO HMTL)
+      */
+
+      .el--7 {
+        order: -1;
+      }
+
+      .el--5 {
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="el el--1">HTML</div>
+      <div class="el el--2">and</div>
+      <div class="el el--3">CSS</div>
+      <div class="el el--4">are</div>
+      <div class="el el--5">amazing</div>
+      <div class="el el--6">languages</div>
+      <div class="el el--7">to</div>
+      <div class="el el--8">learn</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+  background-color: #c2c2c2;
+}
+
+h2 {
+  text-align: center;
+}
+
+article {
+  border: 5px solid black;
+}
+
+.more-info:link, .more-info:visited {
+  color: black;
+}
+
+.more-info:hover, .more-info:active {
+  text-decoration: none;
+}
+
+li {
+  list-style: square;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+
+.free-shipping {
+  text-transform: uppercase;
+  text-decoration: dotted;
+  font-size: 14px;
+  color: #777;
+}
