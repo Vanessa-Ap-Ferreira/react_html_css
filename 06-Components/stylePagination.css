@@ -1,0 +1,135 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+MAIN COLOR: #087f5b
+GRAY COLOR: #343a40
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #343a40;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* My code challenge */
+
+/* .container {
+  width: 800px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #087f5b;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #087f5b;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  color: #087f5b;
+}
+
+.btn-icon:hover {
+  color: #fff;
+}
+
+.number {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.number:hover, .active {
+  background-color: #087f5b;
+  color: #fff;
+}
+
+.dot {
+  top: 0;
+} */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 200px;
+}
+
+.btn {
+  border: 1px solid #087f5b;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #087f5b;
+}
+
+.btn:hover {
+  background-color: #087f5b;
+}
+
+.btn:hover .btn-icon {
+  stroke: #fff;
+}
+
+.page-link:link,
+.page-link:visited {
+  font-size: 18px;
+  background-color: none;
+  text-decoration: none;
+  color: #343a40;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-link:hover,
+.page-link:active,
+.page-link.page-link--current {
+  background-color: #087f5b;
+  color: #fff;
+}
+
+.dots {
+  color: #adb5bd;
+}
