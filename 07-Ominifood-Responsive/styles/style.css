@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fdf2e9;
+  position: relative;
 
   /* Because we want heade to be stick later */
   height: 9.6rem;
